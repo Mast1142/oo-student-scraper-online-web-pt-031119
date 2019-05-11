@@ -11,6 +11,7 @@ class Student
   end
 
   def self.create_from_collection(students_array)
+    Scraper.scrape_index_page
     students_array.each do |create|
       create.Student.new
     end
