@@ -11,11 +11,11 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    Scraper.scrape_index_page
-    students_array.each do |create|
-      create.Student.new
+  #  Scraper.scrape_index_page
+    students_array.each do |student|
+      binding.pry
+      Student.new
     end
-    binding.pry
   end
 
   def add_student_attributes(attributes_hash)
